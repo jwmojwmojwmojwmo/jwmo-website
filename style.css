@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #353535;
+    color: #ffffff;
+  }
+  
+  /* header at the top */
+  header {
+    background: #000000;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  /* main content */
+  main {
+    padding: 2rem;
+  }
+  
+  /* footer at the bottom */
+  footer {
+    background: #000000;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+  }
+
+  .btn {
+    display: inline-block;       /* makes it act like a button box */
+    background: #007acc;         /* button color */
+    color: white;                /* text color */
+    padding: 10px 20px;          /* space inside */
+    border-radius: 5px;          /* rounded corners */
+    text-decoration: none;       /* remove underline */
+    font-weight: bold;           /* bold text */
+    transition: background 0.3s; /* smooth hover effect */
+  }
+  
+  .btn:hover {
+    background: #005a99;         /* darker blue on hover */
+  }
