@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Jwmo's SupremeASM</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="header" id="sasm-header">
+        <h1>SupremeASM</h1>
+        <a href="index.html" class="back-button">← Back</a>
+        <a href="https://github.com/jwmojwmojwmojwmo/SupremeASM" target="_blank" class="header-github-link" aria-label="View Source on GitHub">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+            </svg>
+        </a>
+    </header>
+
+    <main id="sasm-main">
+        <h2>A Brief History</h2>
+        <p> In my second year at UBC, I took CPSC213 with my GOAT Jordan Johnson. This was my first class that delved
+            into low-level computing architecture.
+            I really don't know how to describe everything we did, so to quote the UBC Academic Calendar:
+            "Software architecture, operating systems, and I/O architectures. Relationships between application
+            software, operating systems,
+            and computing hardware; critical sections, deadlock avoidance, and performance; principles and operation of
+            disks and networks."</p>
+        <p> Most people found the course hard. I thought it was on the difficult side, but I never really found it that
+            hard.
+            But that was probably because I found the course content so interesting. So interesting, that in the final
+            month of the course, I decided to try to write my own machine code/assembly language.
+            The name SupremeASM means nothing, I really just picked the first word that sounded cool.</p>
+        <p> At first I started off small. I modelled a basic CPU and Memory implementation, and got to work on some very
+            basic, machine code instructions.
+            These included loading immediate values, storing values to memory, and printing values. </p>
+        <figure>
+            <img src="./assets/sasm-img-1.png"
+                alt="Image of the first working version of SupremeASM, printing hello world to the console"
+                class="sasm-img">
+            <figcaption> The first successful program, which loads the ascii values for each letter to a register and
+                prints them out one by one in the right order.</figcaption>
+        </figure>
+        <p> However, I quickly fell in love with the project. I soon expanded the capabilities of my machine code, even
+            adding complex instructions, such as ones to defragment memory.
+            (This was totally not because my memory implementation contained a critical flaw that causes, in some cases,
+            memory to be completely free yet unable to be allocated)
+        </p>
+        <p> I had finished my machine code instructions. But of course I wasn't done. I was on fire now.
+            I wrote up my own assembly translation for each instruction, creating an input parser that was able to take
+            complex assembly instructions and break them down into the fundamental, basic machine code that I had
+            already written.
+            The easier syntax of assembly gave me even more inspiration to expand the capabilities of SupremeASM. I had
+            even more ideas, grand ideas. At this point it was finals season but it didn't matter all that much to me.
+            The power of assembly compelled me. (Tangentially I barely studied for CPSC213 and did quite good on the
+            final. I thank SupremeASM) </p>
+        <p> Before I knew it, I had finished all the machine code instructions, and assembly translations of them. Along
+            the way I had also added more features, such as a stack, complex arithmetic, and more.
+            I even wrote complete documentation, in case anyone was ever crazy enough to try to use this thing. That was
+            that, I guess. I could write complex programs now, all in my own language. But at this point it was winter
+            break, and I was home spending time with my family. By the time the new school year started, I had already
+            forgotten a lot of what I had done, and what I had learned.</p>
+        <figure>
+            <img src="./assets/sasm-img-2.png" alt="Image of SupremeASM code that calculates n!" class="sasm-img">
+            <figcaption> A more complex program in SupremeASM, taking advantage of most of the new features I added, to
+                calculate n!.</figcaption>
+        </figure>
+        <p> Haha JK I was barely getting started. After reviewing my documentation and some CPSC213 slides, I created a
+            GUI with Java Swing, intending to create my own custom IDE.
+            It was going very poorly until I found a really smart guy's library: RSyntaxTextArea, which let me skip all
+            the hard stuff and instead just import a library to do all the hard work.
+            After that I was on a roll, creating save files, offset calculating, and more. Because of the new saving
+            functionality, I was inspired to make EVEN MORE assembly instructions, such as calling other SupremeASM
+            files.
+        </p>
+        <figure>
+            <img src="./assets/sasm-img-3.png" alt="Image of SupremeASM code that calls a factorial function"
+                class="sasm-img">
+            <figcaption> The new IDE, displaying new functionality to call other programs.</figcaption>
+        </figure>
+        <p> Over time I grew a little tired of the repetitive nature of my assembly code. For example, you can see above
+            how, printing one character takes two lines. TWO WHOLE LINES! But I didn't want to create a whole buncha new
+            assembly and machine code instructions or whatever.
+            Soooo I added a basic "library" feature, where you can build your own libraries, define custom instructions,
+            and use them in any program! This way, there's no more need to deal with my raw assembly code that gets more
+            and more abstracted away anyways!</p>
+        <figure>
+            <img src="./assets/sasm-img-4.png" alt="Image of SupremeASM code that shows custom instructions"
+                class="sasm-img">
+            <figcaption> The new way to create strings with my very own string library! All instructions starting with
+                "str_" are from the library.</figcaption>
+        </figure>
+        <p>See how much easier it is to print long strings now? WOOHOO BABY!</p>
+        <p>And this is where the story ends. At this point there's not much to do with raw assembly, honestly. The
+            assembly/machine code and how the CPU and memory actually run and communicate is hidden under like 5 layers
+            of abstraction at this point.
+            The pros? Well look how much easier it is to print "Hello world!" now. The cons? Well the syntactic sugar
+            goes crazy. (Is that the right term? Probably not)
+        </p>
+        <figure>
+            <img src="./assets/sasm-img-5.png"
+                alt="Image of what the low-level machine code looks like to print a string" class="sasm-img">
+            <figcaption> The compiled machine code to print "Hello World". Notice the difference between now and back
+                before all the abstraction.</figcaption>
+        </figure>
+        <p> Overall this is one of the most fun projects I've ever done, and one that I've actually finished and seen to
+            its end, which I'm very happy about. Over time I'm sure I'll come back to it and add more features. But for
+            now, it shall be left alone.</p>
+        <p>
+            <br>
+        </p>
+        <p>
+            P.S. And if you've read all the way down here through all my rambling, you may as well create some libraries
+            ykwim? If enough people contribute you could make this an actual language.
+            Genuinely speaking there'd probably be like 500 layers of abstraction and libraries importing like one
+            hundred and seventeen other libraries but there's actually no reason why you couldn't eventually make this
+            into like, just normal Java or something. Like you could legit turn this into a real high-level coding
+            language with high-level syntax there's no reason why you couldn't do that.
+            Besides your mental health ig. But it'd be hella cool.
+        </p>
+        <h2>Technical Information</h2>
+        <p>My apologies if you only care about the technical stuff and you had to scroll through all my rambling just to
+            get here. But anyways here we go.</p>
+        <p> First things first, if you want to learn how to use this language, or how to make libraries, or etc., read
+            the README.md in the GitHub repo. I ain't rewriting allat. &lt;3</p>
+        <h3>The Architecture</h3>
+        <p>
+            At its core, the system runs a custom <strong>32-bit Instruction Set Architecture (ISA)</strong> with 10
+            general-purpose registers and a dedicated hardware Stack Pointer.
+            Unlike basic interpreters that read text commands, SupremeASM simulates a true
+            <strong>Fetch-Decode-Execute</strong> cycle.
+            It decodes raw binary instructions using Bitwise Manipulation to isolate opcodes and operands, sorta kinda
+            like how a physical CPU processes electrical signals.
+        </p>
+
+        <h3>Memory & Systems</h3>
+        <p>
+            The most challenging part of the build was the implementation for Memory.
+            I wrote a custom <code>malloc</code>-style heap allocator from scratch. Of course, I had some issues
+            that I didn't realise until too late.
+            So when memory gets messy, you can call my custom Defragmentation Algorithm, which scans the heap and
+            coalesces adjacent free blocks, preventing fragmentation errors.
+        </p>
+
+        <h3>The Toolchain</h3>
+        <p>
+            To make the machine actually usable, I built a Toolchain with a complex recursive Assembler & Macro
+            Preprocessor, allowing for effectively infinite amount of abstraction.
+            Some of the high-level abstractions it supports includes defining functions and importing external libraries.
+            You can write clean, readable code in separate files, and the assembler dynamically injects the logic at
+            compile time, translating high-level, human-somewhat-readable syntax into raw machine code.
+        </p>
+        <div id="technical-deep-dive">
+            <h2>Technical Deep Dive</h2>
+            <h3>System Specs</h3>
+            <ul class="tech-list">
+                <li>
+                    <strong>Language:</strong> Java (Core Logic) + Swing (GUI)
+                </li>
+                <li>
+                    <strong>Virtualization:</strong> Custom 32-bit VM with Fetch-Decode-Execute cycle simulation.
+                </li>
+                <li>
+                    <strong>Compiler Design:</strong> Custom Assembler with Lexical Analysis, Macro Expansion, and
+                    Library Linking.
+                </li>
+                <li>
+                    <strong>Systems Programming:</strong> Implemented manual memory management (Heap
+                    Allocation/Deallocation) and Garbage Collection (Defragmentation).
+                </li>
+            </ul>
+            <p><br></p>
+            <h3>Key Features</h3>
+            <ul class="tech-list">
+                <li>
+                    <strong>Register-Based VM:</strong> Features 10 General-Purpose Registers, a Program Counter (PC),
+                    and a Stack Pointer (SP).
+                </li>
+                <li>
+                    <strong>Bitwise Decoding:</strong> Instructions are parsed via bit-shifting <code>(ins >> 28)</code>
+                    rather than string comparison for raw performance.
+                </li>
+                <li>
+                    <strong>Interrupt Handling:</strong> The <code>0xF</code> opcode acts as a Supervisor Call, triggering privileged VM operations that normal instructions cannot touch: Heap Defragmentation, Stack Bounds Checking, and Direct Memory Dumping.
+            </ul>
+        </div>
+        <p>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        </p>
+    </main>
+</body>
+
+</html>

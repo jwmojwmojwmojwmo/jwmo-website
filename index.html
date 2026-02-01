@@ -1,24 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Jwmo's Website</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Jwmo's Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
-  <header>
-    <h1>Welcome to The Jwmo Website</h1>
-    <img src="./assets/Jwmologo.png" alt="Image of jwmo">
-  </header>
+    <header class="header">
+        <h1>Welcome to Jwmo's Website</h1>
+        <img src="./assets/Jwmologo.png" alt="Image of jwmo's logo" class="logo-img">
+    </header>
 
-  <main>
-    <h2>About Me</h2>
-    <p>test.</p>
-    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="btn">Click Me</a>
-  </main>
+    <main>
+    <div id="about-me">
+        <h2>About Me</h2>
+        <p>Online I'm known as <strong>jwmo</strong>. That's pretty unpronouncable to be honest, so you can just call me <strong>Jason</strong>.
+        <p>Currently, I'm a Bachelor's of Science student at UBC, pursuing a Major in Computer Science, Minor in Data Science, and a Master's of Management through UBC's B+MM Dual Degree program.</p>
+        <p>I spend most of my time building things that probably shouldn't exist. For example, I've been working on SupremeASM (my own custom assembly language), a Jeff the Landshark Discord bot, and trying to figure out how to make cool websites.
+            Notice the subtle background colours that are my logo but are slowly changing into different colour palettes? Yeah that took me way too long.</p>
+        <p>Although I love coding, HTML & CSS simply does not speak to me sometimes. I am not the graphics design man we need in society. Most of the time I enjoy backend more, but that doesn't mean I can't make websites!</p>
+    </div>
+    <div id="my-stuff">
+        <h2>My Projects</h2>
+        <p>Like I said I make things that probably shouldn't exist. But here's some projects I'm particularly proud of:</p>
+        <div class="card-container">
+            <div class="card">
+                <h3 id="sasm-card">SupremeASM</h3>
+                <p>A custom assembly language built in Java. Fully Turing-complete, and comes with a custom IDE to use it with. There's no reason for it to exist, but it does.</p>
+                <a href="sasm.html" class="card-button" id="sasm-button">More Info</a>
+                <a href="https://github.com/jwmojwmojwmojwmo/SupremeASM" class="card-button" target="_blank">GitHub</a>
+            </div>
+            <div class="card">
+                <h3 id="jeff-card">Jeff Discord Bot</h3>
+                <p>The Jeff the Landshark Discord Bot made with Node.js. Get pictures of Jeff, rank your Marvel Rivals Jeff gameplay, and more. I love the little guy and you should too.</p>
+                <a href= "jeff.html" class="card-button" id="jeff-button">More Info</a>
+                <a href="https://github.com/jwmojwmojwmojwmo/JeffDiscordBot" class="card-button" target="_blank">GitHub</a>
+            </div>
+        </div>  
+    </div>
+    <div id="fun-facts">
+        <h2>Fun Facts About Me</h2>
+        <p>Good rubiks cube man</p>
+    </div>
+    <div id="contact-me">
+        <h2>Contact Info</h2>
+        <p>Discord and stuff</p>
+    </div>
+    </main>
+    <footer class="footer">
+        <button class="footer-button" type="button" id="footer-down-button" aria-label="Scroll down">
+            <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <polyline points="2 9 12 18 22 9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+    </footer>
 
-  <footer>
-    <p>© 2025 jwmo</p>
-  </footer>
 </body>
+
 </html>
