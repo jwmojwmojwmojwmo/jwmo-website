@@ -233,13 +233,13 @@
     transform: scale(1.1);
 }
 
-   #sasm-header {
+   #sasm-header, #jeff-header {
     animation: none;
     background: rgba(0, 0, 0, 0.85);
     height: 8vh;
    }
 
-   #sasm-main {
+   #sasm-main, #jeff-main {
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -254,7 +254,7 @@
     pointer-events: auto;
    }
 
-   #sasm-main p {
+   #sasm-main p, #jeff-main p {
     text-align: left;
     text-indent: 2rem;
     max-width: 1500px; 
@@ -262,9 +262,13 @@
    }
 
    #sasm-main h2 {
-    color: var(--color-3, green);
+    color: var(--color-1, red);
    }
 
+   #jeff-main h2 {
+    color: var(--color-2, yellow);
+   }
+   
    .sasm-img {
     width: 80%;
     height: auto;

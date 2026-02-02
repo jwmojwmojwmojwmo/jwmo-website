@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Jwmo's Jeff Discord Bot</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="header" id="jeff-header">
+        <h1>Jeff Discord Bot</h1>
+        <a href="index.html" class="back-button">← Back</a>
+        <a href="https://github.com/jwmojwmojwmojwmo/JeffDiscordBot" target="_blank" class="header-github-link" aria-label="View Source on GitHub">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+            </svg>
+        </a>
+    </header>
+
+    <main id="jeff-main">
+        <h2>A Brief History</h2>
+        <p> In my second year at UBC, I took CPSC213 with my GOAT Jordan Johnson. This was my first class that delved
+            into low-level computing architecture.
+            I really don't know how to describe everything we did, so to quote the UBC Academic Calendar:
+            "Software architecture, operating systems, and I/O architectures. Relationships between application
+            software, operating systems,
+            and computing hardware; critical sections, deadlock avoidance, and performance; principles and operation of
+            disks and networks."</p>
+        <p> Most people found the course hard. I thought it was on the difficult side, but I never really found it that
+            hard.
+            But that was probably because I found the course content so interesting. So interesting, that in the final
+            month of the course, I decided to try to write my own machine code/assembly language.
+            The name SupremeASM means nothing, I really just picked the first word that sounded cool.</p>
+        <p> At first I started off small. I modelled a basic CPU and Memory implementation, and got to work on some very
+            basic, machine code instructions.
+            These included loading immediate values, storing values to memory, and printing values. </p>
+        <figure>
+            <img src="./assets/sasm-img-1.png"
+                alt="Image of the first working version of SupremeASM, printing hello world to the console"
+                class="sasm-img">
+            <figcaption> The first successful program, which loads the ascii values for each letter to a register and
+                prints them out one by one in the right order.</figcaption>
+        </figure>
+        <h2>Technical Information</h2>
+        <p>My apologies if you only care about the technical stuff and you had to scroll through all my rambling just to
+            get here. But anyways here we go.</p>
+        <p> First things first, if you want to learn how to use this language, or how to make libraries, or etc., read
+            the README.md in the GitHub repo. I ain't rewriting allat. &lt;3</p>
+        <h3>The Architecture</h3>
+        <p>
+            At its core, the system runs a custom <strong>32-bit Instruction Set Architecture (ISA)</strong> with 10
+            general-purpose registers and a dedicated hardware Stack Pointer.
+            Unlike basic interpreters that read text commands, SupremeASM simulates a true
+            <strong>Fetch-Decode-Execute</strong> cycle.
+            It decodes raw binary instructions using Bitwise Manipulation to isolate opcodes and operands, sorta kinda
+            like how a physical CPU processes electrical signals.
+        </p>
+    </main>
+</body>
+
+</html>

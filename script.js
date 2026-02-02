@@ -31,7 +31,7 @@ function updateColors() {
 }
 
 requestAnimationFrame(updateColors);
-pageMap.get(1).classList.add("active-page");
+pageMap.get(page).classList.add("active-page");
 
 window.addEventListener("wheel", (e) => {
     if (isScrolling) {
