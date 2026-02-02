@@ -16,51 +16,109 @@
     <header class="header" id="jeff-header">
         <h1>Jeff Discord Bot</h1>
         <a href="index.html" class="back-button">← Back</a>
-        <a href="https://github.com/jwmojwmojwmojwmo/JeffDiscordBot" target="_blank" class="header-github-link" aria-label="View Source on GitHub">
+        <a href="https://github.com/jwmojwmojwmojwmo/JeffDiscordBot" target="_blank" class="header-link" aria-label="View Source on GitHub">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+            </svg>
+        </a>
+        <a href="https://top.gg/bot/1403391763510464663" target="_blank" class="header-link" id="topgg-link" aria-label="Vote on Top.gg">
+            <svg viewBox="120 120 580 580" xmlns="http://www.w3.org/2000/svg" fill="#FF3366">
+                <path d="M655.711 247H330.71V572H397.113C422.599 572 447.042 561.876 465.064 543.854C483.086 525.832 493.21 501.389 493.21 475.902V409.5H559.613C585.099 409.5 609.542 399.375 627.564 381.354C645.586 363.332 655.711 338.889 655.711 313.402V247Z"></path>
+                <path d="M144 247H306.5V409.5H193.657C180.531 409.5 167.943 404.286 158.661 395.004C149.379 385.722 144.165 373.134 144.165 360.008L144 247Z"></path>
             </svg>
         </a>
     </header>
 
     <main id="jeff-main">
         <h2>A Brief History</h2>
-        <p> In my second year at UBC, I took CPSC213 with my GOAT Jordan Johnson. This was my first class that delved
-            into low-level computing architecture.
-            I really don't know how to describe everything we did, so to quote the UBC Academic Calendar:
-            "Software architecture, operating systems, and I/O architectures. Relationships between application
-            software, operating systems,
-            and computing hardware; critical sections, deadlock avoidance, and performance; principles and operation of
-            disks and networks."</p>
-        <p> Most people found the course hard. I thought it was on the difficult side, but I never really found it that
-            hard.
-            But that was probably because I found the course content so interesting. So interesting, that in the final
-            month of the course, I decided to try to write my own machine code/assembly language.
-            The name SupremeASM means nothing, I really just picked the first word that sounded cool.</p>
-        <p> At first I started off small. I modelled a basic CPU and Memory implementation, and got to work on some very
-            basic, machine code instructions.
-            These included loading immediate values, storing values to memory, and printing values. </p>
-        <figure>
-            <img src="./assets/sasm-img-1.png"
-                alt="Image of the first working version of SupremeASM, printing hello world to the console"
-                class="sasm-img">
-            <figcaption> The first successful program, which loads the ascii values for each letter to a register and
-                prints them out one by one in the right order.</figcaption>
-        </figure>
-        <h2>Technical Information</h2>
-        <p>My apologies if you only care about the technical stuff and you had to scroll through all my rambling just to
-            get here. But anyways here we go.</p>
-        <p> First things first, if you want to learn how to use this language, or how to make libraries, or etc., read
-            the README.md in the GitHub repo. I ain't rewriting allat. &lt;3</p>
-        <h3>The Architecture</h3>
-        <p>
-            At its core, the system runs a custom <strong>32-bit Instruction Set Architecture (ISA)</strong> with 10
-            general-purpose registers and a dedicated hardware Stack Pointer.
-            Unlike basic interpreters that read text commands, SupremeASM simulates a true
-            <strong>Fetch-Decode-Execute</strong> cycle.
-            It decodes raw binary instructions using Bitwise Manipulation to isolate opcodes and operands, sorta kinda
-            like how a physical CPU processes electrical signals.
+            <p> In February 2025, I was introduced to a little game called Marvel Rivals by a friend. It was a hero shooter, not really my genre (if you are curious what games I play, check out my fun facts page)
+                I thought I'd just try it out, play with friends for a while, and quit, just like I have for other shooter games I have been introduced to. 
+                However, something in the game made me fall in love with it. And that thing, or should I say good little boi, was Jeff the Landshark.
+            </p>
+            <figure>
+                <img src="./assets/jeff-img-1.png"
+                    alt="Image of Jeff the Landshark"
+                    class="jeff-img">
+                <figcaption> Jeff the Landshark in all his cuteness and glory. Credit: Marvel Rivals. </figcaption>
+            </figure>
+        <p> I loved the little guy so much that I decided to one-trick him for the rest of my Rivals career. Through all the changes he's been through, all the hate he suffers, I will always stand by him.
+            There have been times I wanted to quit, but I could never say no to Jeffy he's SO CUTE.
+            (And I could yap about horrible his balance changes have been but that's neither here nor there.)</p>
+        <p> Anyways, my love for him inspired me to create a Discord bot based around him. It was very difficult for me at first, as I didn't know any JavaScript, and things like async functions and interactions with discord.js were...really hard for me to understand.
+            But over time I was able to begin to understand. Formulate a concept of a plan.
         </p>
+        <p> Initially, I had pretty simple features. Pinging the bot, getting a Jeff picture sent in DMs, stuff like that. But as I learned more, my ambitions grew. I realised what I could do.
+            Soon after, I learned (painfully) how to use SQLite databases for user data management (thank you Kevin for teaching me). This opened up a whole new world of possibilities. I added currency, dailies, stuff like that. You know, classic generic Discord economy bot slop.
+            But that was just a stepping stone to learning how Discord bots worked.
+        </p>
+        <p>
+            Once I understood the basics, I was able to create more advanced features. I began to work with APIs, and used them to create commands that would allow you to talk to Jeff, ask him questions, and get silly answers.
+            Furthermore, I even created a skill checker, rating a player's skill with Jeff in Marvel Rivals. Basically, anything I thought was fun and cool, I did.
+        </p>
+        <p>
+            I never really expected this project to go anywhere, but after I put my bot on Top.gg (the biggest Discord bot website), I actually started to get a bit of traction. 
+            Turns out there were people like me, obsessed with Jeff. As of Jan 2026, Jeff bot has been added to over 50 servers, with around 200 users logged in the database. (the actual number of users may be higher as only some commands actually log a user to the database)
+        </p>
+        <p>
+            Anyways, I'm very happy with how the bot is going. Right now I'm really in a bit of a creative slump, just trying to think of new commands and ideas to help the bot stay fresh and fun. If you have any ideas pls pls pls give me.
+            But I see people use the bot every day, and quite frankly, that's all I could ask for. For what I do to actually make a difference, no matter how small. It makes me feel important in this uncaring world lol.
+        </p>
+        <p>
+            Oh damn that got sad a little too quickly. MB reader. Anyways yeah uh TL;DR I love Jeff so much he's my baby and I made him into a Discord bot you should check him out mhm.
+            Also pls contribute I need ideas tanks you
+        </p>
+            <h2>Technical Deep Dive</h2>
+            <h3>Core Architecture</h3>
+            <ul class="tech-list">
+                <li>
+                    <strong>Runtime Environment:</strong> 
+                    Node.js execution layer utilizing <b>Discord.js (v14)</b> for direct WebSocket Gateway interaction and event-driven state management.
+                </li>
+                <li>
+                    <strong>Data Persistence:</strong> 
+                    <b>SQLite</b> (via Sequelize ORM) managing relational schemas for the user economy, inventory tracking, and analytics, with JSON-blob storage for user preferences.
+                </li>
+                <li>
+                    <strong>Generative AI:</strong> 
+                    <b>Google Gemini 2.5 Flash-Lite</b> integration with Constrained Generation directives, forcing the model to adhere to rigid character roleplay rules while maintaining contextual awareness.
+                </li>
+                <li>
+                    <strong>External Integrations:</strong> 
+                    Hybrid API consumption connecting the <b>Marvel Rivals API</b> (REST) for stats and the <b>Top.gg SDK</b> for cross-platform voting synchronization.
+                </li>
+            </ul>
+        
+            <h3>System Modules</h3>
+            <ul class="tech-list">
+                <li>
+                    <strong>Virtual Economy Engine:</strong> 
+                    Implements a closed-loop economic system where <b>Energy</b> acts as a throttled resource. Transactions utilize a <b>Progressive Tax Formula</b> to dynamically scale fees based on user activity and reputation among users, preventing inflation and currency laundering.
+                </li>
+                <li>
+                    <strong>Social Sentiment Metrics:</strong> 
+                    Features a peer-to-peer <b>Reputation Architecture</b>. Users influence global rankings via binary interactions (<i>Bubble</i> vs <i>Spit</i>), creating a self-regulating hierarchy where social standing is determined by collective user sentiment rather than arbitrary XP.
+                </li>
+                <li>
+                    <strong>Binary Asset Streaming:</strong> 
+                    The <code>/jeff</code> module bypasses external CDNs by implementing a <b>Local Media Streamer</b>. It recursively scans the host directory to buffer and serve high-fidelity binary assets directly to the client with minimal latency.
+                </li>
+                <li>
+                    <strong>Statistical Scoring Engine:</strong> 
+                    The skillcheck command normalizes raw game data (KDA, MVP rates) against an exponential curve to calculate skill ratings. It includes a custom caching layer with a <b>30-minute lock</b> to strictly adhere to third-party API rate limits.
+                </li>
+                <li>
+                    <strong>Privacy Compliance UI:</strong> 
+                    Features a self-service <b>Data Governance Dashboard</b> (<code>/settings</code>) allowing users to export their data or trigger a permanent <b>GDPR-compliant deletion</b> directly from the Discord interface.
+                </li>
+            </ul>
+            <p>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+            </p>
     </main>
 </body>
 

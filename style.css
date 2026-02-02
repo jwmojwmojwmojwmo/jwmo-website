@@ -215,22 +215,26 @@
        color: white;
    }
 
-   .header-github-link {
+   .header-link {
     position: fixed;
-    right: 20px;
+    right: 6rem;
     width: 10%;
     height: auto;
     color: white;
 }
 
-.header-github-link svg {
+.header-link svg {
     width: 30%; 
     height: auto;
 }
 
-.header-github-link:hover {
+.header-link:hover {
     opacity: 0.7;
     transform: scale(1.1);
+}
+
+#topgg-link {
+    right: 1rem;
 }
 
    #sasm-header, #jeff-header {
@@ -268,7 +272,7 @@
    #jeff-main h2 {
     color: var(--color-2, yellow);
    }
-   
+
    .sasm-img {
     width: 80%;
     height: auto;
