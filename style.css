@@ -107,16 +107,19 @@
    }
 
    .card {
-       background: rgba(255, 255, 255, 0.1);
+       background: rgba(255, 255, 255, 0.05);
        backdrop-filter: blur(10px);
        border: 1px solid rgba(255, 255, 255, 0.2);
-
        border-radius: 15px;
        padding: 2rem;
        width: 300px;
        text-align: left;
        transition: transform 0.3s ease;
        cursor: default;
+   }
+
+   .card h3 {
+       text-shadow: 1px 1px 2px black;
    }
 
    .card:hover {
@@ -156,6 +159,65 @@
    #jeff-card,
    #jeff-button {
        color: var(--color-2, yellow);
+   }
+
+   .fact-container {
+       display: flex;
+       flex-wrap: wrap;
+       gap: 1rem;
+       justify-content: center;
+   }
+
+   .fact-box-1,
+   .fact-box-2,
+   .fact-box-3,
+   .fact-box-4,
+   .fact-box-5 {
+       flex: 1;
+       min-width: 20%;
+       max-width: 45%;
+       padding: 10px;
+       background: rgba(0, 0, 0, 0.15);
+       border-radius: 12px;
+       margin-top: 0;
+   }
+
+   .fact-box-1 h3 {
+       color: var(--color-1);
+       text-shadow: 1px 1px 2px black;
+   }
+
+   .fact-box-2 h3 {
+       color: var(--color-2);
+       text-shadow: 1px 1px 2px black;
+   }
+
+   .fact-box-3 h3 {
+       color: var(--color-3);
+       text-shadow: 1px 1px 2px black;
+   }
+
+   .fact-box-4 h3 {
+       color: var(--color-4);
+       text-shadow: 1px 1px 2px black;
+   }
+
+   .fact-box-5 h3 {
+       color: var(--color-5);
+       text-shadow: 1px 1px 2px black;
+   }
+
+   .contact-info {
+       display: flex;
+       flex-wrap: wrap;
+       gap: 1rem;
+       justify-content: center;
+   }
+
+   .contact-button {
+       color: white;
+       text-shadow: 1px 1px 2px black;
+       
    }
 
    .footer {
@@ -216,74 +278,77 @@
    }
 
    .header-link {
-    position: fixed;
-    right: 6rem;
-    width: 10%;
-    height: auto;
-    color: white;
-}
-
-.header-link svg {
-    width: 30%; 
-    height: auto;
-}
-
-.header-link:hover {
-    opacity: 0.7;
-    transform: scale(1.1);
-}
-
-#topgg-link {
-    right: 1rem;
-}
-
-   #sasm-header, #jeff-header {
-    animation: none;
-    background: rgba(0, 0, 0, 0.85);
-    height: 8vh;
+       position: fixed;
+       right: 6rem;
+       width: 10%;
+       height: auto;
+       color: white;
    }
 
-   #sasm-main, #jeff-main {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    transition: opacity 0.5s;
-    pointer-events: none;
-    min-height: 100vh;
-    overflow-y: auto;
-    padding-top: 120px;
-    padding-bottom: 50px;
-    pointer-events: auto;
+   .header-link svg {
+       width: 30%;
+       height: auto;
    }
 
-   #sasm-main p, #jeff-main p {
-    text-align: left;
-    text-indent: 2rem;
-    max-width: 1500px; 
-    margin-bottom: 1.5rem;
+   .header-link:hover {
+       opacity: 0.7;
+       transform: scale(1.1);
+   }
+
+   #topgg-link {
+       right: 1rem;
+   }
+
+   #sasm-header,
+   #jeff-header {
+       animation: none;
+       background: rgba(0, 0, 0, 0.85);
+       height: 8vh;
+   }
+
+   #sasm-main,
+   #jeff-main {
+       height: 100vh;
+       display: flex;
+       flex-direction: column;
+       justify-content: flex-start;
+       align-items: center;
+       transition: opacity 0.5s;
+       pointer-events: none;
+       min-height: 100vh;
+       overflow-y: auto;
+       padding-top: 120px;
+       padding-bottom: 50px;
+       pointer-events: auto;
+   }
+
+   #sasm-main p,
+   #jeff-main p {
+       text-align: left;
+       text-indent: 2rem;
+       max-width: 1500px;
+       margin-bottom: 1.5rem;
    }
 
    #sasm-main h2 {
-    color: var(--color-1, red);
+       color: var(--color-1, red);
    }
 
    #jeff-main h2 {
-    color: var(--color-2, yellow);
+       color: var(--color-2, yellow);
    }
 
    .sasm-img {
-    width: 80%;
-    height: auto;
+       width: 80%;
+       height: auto;
    }
 
-.tech-list {
-    text-align: left;
-    padding-left: 20px;
-}
+   .tech-list {
+       text-align: left;
+       padding-left: 20px;
+   }
 
-.tech-list li {
-    margin-bottom: 15px;
-    line-height: 1.6;
-}
+   .tech-list li {
+       margin-bottom: 15px;
+       line-height: 1.6;
+   }

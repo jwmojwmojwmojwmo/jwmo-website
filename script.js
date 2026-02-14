@@ -2,7 +2,7 @@ let hue = 0;
 let isScrolling = false;
 const minPage = 1;
 const maxPage = 4;
-let page = minPage;
+let page = parseInt(sessionStorage.getItem("currPage")) || minPage;
 const footerDownButton = document.getElementById("footer-down-button");
 const pageMap = new Map();
 pageMap.set(1, document.getElementById("about-me"));
@@ -68,6 +68,7 @@ function flipAndUpdatePage(pageChange, circularPage) {
             page = maxPage;
         }
     }
+    sessionStorage.setItem("currPage", page);
     const currentPage = pageMap.get(page);
     if (prevPage == currentPage) {
         return;
