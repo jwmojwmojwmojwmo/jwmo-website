@@ -10,7 +10,8 @@ export default async function handler(req, res) {
     }
 
     const test = req.body;
-    console.log(test);
+    const user_id = test.data.user.platform_id;
+    console.log(user_id);
 
     return res.status(200).json({ success: true });
 }
