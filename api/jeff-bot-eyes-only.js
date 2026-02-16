@@ -11,13 +11,13 @@ export default async function handler(req, res) {
     }
 
     const data = req.body;
-    console.log(req.headers, req.body);
-    const user_id = data.data.user.platform_id;
-    const user_name = data.data.user.name;
-    // await fetch(discord_url, {
-    //     method: "POST",
-    //     headers
-    // })
+    console.log(req.headers.authorization, req.body);
+
+    await fetch(discord_url, {
+        method: "POST",
+        headers: { 'Content-Type': 'application/json' },
+        body: "HI!"
+    });
 
     return res.status(200).json({ success: true });
 }
