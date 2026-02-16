@@ -6,9 +6,9 @@ export default async function handler(req, res) {
     const password = process.env.TOPGG_AUTH;
     const discord_url = process.env.DISCORD_WEBHOOK_URL;
 
-    if (!password) {
-        return res.status(500).json({ error: 'Wrong password' });
-    }
+    // if (password != req.headers.authorization) {
+
+    // }
 
     const data = req.body;
     console.log(req.headers.authorization, req.body);
@@ -16,7 +16,9 @@ export default async function handler(req, res) {
     await fetch(discord_url, {
         method: "POST",
         headers: { 'Content-Type': 'application/json' },
-        body: "HI!"
+        body: JSON.stringify({
+            content: "Hello World!"
+        })
     });
 
     return res.status(200).json({ success: true });
