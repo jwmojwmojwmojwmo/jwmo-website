@@ -39,10 +39,8 @@ window.addEventListener("wheel", (e) => {
     }
     isScrolling = true;
     if (e.deltaY < 0) {
-        console.log("up");
         flipAndUpdatePage(-1, false);
     } else {
-        console.log("down");
         flipAndUpdatePage(1, false);
     }
     setTimeout(() => {
@@ -50,10 +48,25 @@ window.addEventListener("wheel", (e) => {
     }, 250);
 });
 
+window.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowUp" || e.key === "PageUp") {
+        flipAndUpdatePage(-1, false);
+    } else if (e.key === "ArrowDown" || e.key === "PageDown") {
+        flipAndUpdatePage(1, false);
+    }
+});
+
 footerDownButton.addEventListener("click", () => {
     console.log("test");
     flipAndUpdatePage(1, true);
 });
+
+function updateDots() {
+    document.querySelectorAll('.page-dot').forEach(dot => {
+        dot.classList.toggle('active', parseInt(dot.dataset.page) === page);
+    });
+}
+updateDots();
 
 function flipAndUpdatePage(pageChange, circularPage) {
     const prevPage = pageMap.get(page);
@@ -75,4 +88,5 @@ function flipAndUpdatePage(pageChange, circularPage) {
     }
     prevPage.classList.toggle("active-page");
     currentPage.classList.toggle("active-page");
+    updateDots();
 }
