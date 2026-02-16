@@ -1,4 +1,4 @@
 # jwmo-website
-Website for jwmo, hosted on GitHub
+Website for jwmo
 
 Work in progress
