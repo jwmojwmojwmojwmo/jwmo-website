@@ -9,7 +9,7 @@ export default async function handler(req, res) {
     // if (password != req.headers.authorization) {
 
     // }
-    console.log(req.headers.authorization, req.body);
+    console.log(req.headers, req.body);
     if (req.body.type === 'vote.create') {
         await fetch(discord_url, {
             method: "POST",
@@ -21,4 +21,6 @@ export default async function handler(req, res) {
     }
 
     return res.status(200).json({ success: true });
+    //hi jeff have you eaten
+    //have some cheese <>
 }   
