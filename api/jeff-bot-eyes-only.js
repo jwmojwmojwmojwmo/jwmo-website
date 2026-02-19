@@ -24,6 +24,7 @@ export default async function handler(req, res) {
     let rawBody;
 
     try {
+        console.log(req);
         rawBody = await getRawBody(req);
         const signatureHeader = req.headers['x-topgg-signature'];
         let timestamp, signature;
@@ -38,10 +39,13 @@ export default async function handler(req, res) {
             console.error('Webhook signature verification failed');
             return res.status(401).json({ error: 'Invalid signature' });
         }
+        console.log("Webhook verification success!")
     } catch (err) {
         return res.status(400);
     }
     const body = JSON.parse(rawBody);
+
+    console.log(body);
 
     if (body.type === 'vote.create') {
         await fetch(discord_url, {
