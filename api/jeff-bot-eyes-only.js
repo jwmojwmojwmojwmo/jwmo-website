@@ -25,7 +25,6 @@ export default async function handler(req, res) {
 
     try {
         rawBody = await getRawBody(req);
-        console.log(rawBody);
         const signatureHeader = req.headers['x-topgg-signature'];
         let timestamp, signature;
         signatureHeader.split(',').forEach(part => {
