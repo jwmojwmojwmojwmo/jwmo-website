@@ -346,6 +346,11 @@
        height: 8vh;
    }
 
+   #terms-button {
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    font-size: larger;
+   }
    #sasm-main,
    #jeff-main {
        display: flex;
@@ -398,6 +403,18 @@
     margin-bottom: 1rem;
        line-height: 1.6;
    }
+
+   #tos-main {
+        background: rgba(0, 0, 0, 1);
+        display: block;
+        height: 100vh;
+        overflow-y: auto;
+        text-align: left;
+   }
+
+   #tos-main h1 {
+    text-align: center;
+}
 
 /*MOBILE*/
 @media screen and (max-width: 768px) {
